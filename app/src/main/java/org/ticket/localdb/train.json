@@ -1,0 +1,57 @@
+[
+  [
+  {
+    "train":
+    {
+      "train_id": "omkarexp",
+      "train_no": 12345,
+      "seats":
+      [
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0]
+      ],
+      "stations_time":
+      {
+        "pune": "13:12:23",
+        "solapur":"16:23:45",
+        "latur": "17:45:23"
+      },
+      "stations":
+      [
+        "pune",
+        "solapur",
+        "latur"
+      ]
+    }
+  }
+],
+
+[
+    {
+      "train_id": "tirupati",
+      "train_no": 123456,
+      "seats":
+      [
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0],
+        [0,0,0,0,0,0]
+      ],
+      "stations_time":
+      {
+        "pune": "13:12:23",
+        "solapur":"16:23:45",
+        "tirupati": "17:45:23"
+      },
+      "stations":
+      [
+        "pune",
+        "solapur",
+        "tirupati"
+      ]
+    }
+
+]
+]
