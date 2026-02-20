@@ -1,28 +1,32 @@
 package org.ticket.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Date;
 
-
-public class ticket {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Ticket {
 
     private String ticketId;
-    private  String userId;
+    private String userId;
     private String source;
     private String destination;
-    private Date dateofTravel;
-    private train train;
+    private Date dateOfTravel;
+    private Train train;
 
-    public ticket(String ticketId, String userId, String source, String destination, Date dateofTravel, train train) {
+    public Ticket() {}
+
+    public Ticket(String ticketId, String userId, String source, String destination, Date dateOfTravel, Train train) {
         this.ticketId = ticketId;
         this.userId = userId;
         this.source = source;
         this.destination = destination;
-        this.dateofTravel = dateofTravel;
+        this.dateOfTravel = dateOfTravel;
         this.train = train;
     }
-    public  String getTicketInfo()
-    {
-        return String.format("Ticket Id : %s  belogs to user %s from %s to %s on %S",ticketId,userId,source,destination,dateofTravel);
+
+    public String getTicketInfo() {
+        return String.format("Ticket Id : %s belongs to user %s from %s to %s on %s", ticketId, userId, source, destination, dateOfTravel);
     }
 
     public String getTicketId() {
@@ -57,19 +61,21 @@ public class ticket {
         this.destination = destination;
     }
 
-    public Date getDateofTravel() {
-        return dateofTravel;
+    @JsonProperty("data_of_treavel")
+    public Date getDateOfTravel() {
+        return dateOfTravel;
     }
 
-    public void setDateofTravel(Date dateofTravel) {
-        this.dateofTravel = dateofTravel;
+    @JsonProperty("data_of_treavel")
+    public void setDateOfTravel(Date dateOfTravel) {
+        this.dateOfTravel = dateOfTravel;
     }
 
-    public train getTrain() {
+    public Train getTrain() {
         return train;
     }
 
-    public void setTrain(train train) {
+    public void setTrain(Train train) {
         this.train = train;
     }
 }
